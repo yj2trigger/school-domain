@@ -15,8 +15,9 @@
       <p>2교시</p><p id="The2ndClass">none</p>
       <p>3교시</p><p id="The3rdClass">none</p>
       <p>4교시</p><p id="The4thClass">none</p>
-      <p>6교시</p><p id="The5thClass">none</p>
-      <p>7교시</p><p id="The6thClass">none</p>
+      <p>5교시</p><p id="The5thClass">none</p>
+      <p>6교시</p><p id="The6thClass">none</p>
+      <p>7교시</p><p id="The7thClass">none</p>
     
       <form>
         <label for="user-input1"></label>
@@ -28,6 +29,7 @@
             document.getElementById('The1stClass').innerHTML = localStorage.getItem('subject1');
             document.getElementById('user-input1').value = localStorage.getItem('subject1');
           }
+        };
         document.getElementById('user-input1').addEventListener('input', function () {
           const subject1 = document.getElementById('user-input1').value;
           document.getElementById('The1stClass').innerHTML = subject1;
@@ -117,6 +119,22 @@
           const subject6 = document.getElementById('user-input6').value;
           document.getElementById('The6thClass').innerHTML = subject6;
           localStorage.setItem('subject6', subject6);
+        });
+                <form>
+        <label for="user-input6"></label>
+        <input type="text" id="user-input1" name="user-input6" placeholder="none">
+        </form>
+      <script>
+        window.onload = function() {
+          if (localStorage.getItem('subject7')) {
+            document.getElementById('The7thClass').innerHTML = localStorage.getItem('subject7');
+            document.getElementById('user-input7').value = localStorage.getItem('subject7');
+          }
+        };
+        document.getElementById('user-input7').addEventListener('input', function () {
+          const subject7 = document.getElementById('user-input7').value;
+          document.getElementById('The6thClass').innerHTML = subject7;
+          localStorage.setItem('subject7', subject7);
         });
       </script>
   </body>
